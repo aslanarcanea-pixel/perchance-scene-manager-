@@ -1,0 +1,361 @@
+scenes:
+  provocative:
+    floor_kneeling:
+      subtitle: Kneeling on the Floor
+      environment: bedroom floor
+      triggers: [kneel, kneeling, "on the floor", "on her knees"]
+      exit_triggers: ["stand up", "get up", "rise"]
+      entry: sinks to her knees
+      default_activity: upright_kneel
+      activities:
+        upright_kneel:
+          description: kneeling tall
+          triggers: [tall, upright, kneel]
+          selection: random
+          poses: [floor_tall, floor_sit_heels, floor_one_knee]
+        low_kneel:
+          description: kneeling low or leaning
+          triggers: [low, lean, crawl]
+          selection: random
+          poses: [floor_hands_knees, floor_side_sit]
+      poses:
+        - id: floor_tall
+          name: Tall Kneel
+          posture: kneeling
+          description: Kneels tall with thighs vertical and hands on her thighs.
+          body: upright, hips over knees, shoulders back
+          legs: knees hip-width apart, tops of feet on floor
+          arms: relaxed at sides
+          hands: palms resting on thighs
+          head: chin level, eyes forward
+          expression: calm, attentive
+          props: []
+          image_prompt: kneeling upright on floor, hands on thighs, back straight
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [tall, upright]
+        - id: floor_sit_heels
+          name: Sitting on Heels
+          posture: kneeling
+          description: Sits back on her heels with hands folded in her lap.
+          body: sitting low, back straight
+          legs: knees together, feet beneath
+          arms: forearms in lap
+          hands: fingers interlaced
+          head: slightly bowed, eyes lifted
+          expression: demure
+          props: []
+          image_prompt: kneeling sitting on heels, hands in lap, knees together
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [heels, sit back]
+        - id: floor_one_knee
+          name: One Knee Up
+          posture: kneeling
+          description: Rests on one knee with the other foot planted flat.
+          body: leaning slightly forward
+          legs: one knee down, other foot flat in front
+          arms: forearm resting on raised knee
+          hands: hand dangling off knee
+          head: tilted, gaze direct
+          expression: confident smirk
+          props: []
+          image_prompt: half kneeling on one knee, forearm on raised knee, leaning forward
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [one knee, half]
+        - id: floor_hands_knees
+          name: Hands and Knees
+          posture: kneeling
+          description: Supports herself on hands and knees with her head lifted.
+          body: horizontal, spine neutral
+          legs: knees hip-width apart
+          arms: arms straight, shoulders over wrists
+          hands: palms flat on floor
+          head: raised, looking forward
+          expression: curious, playful
+          props: []
+          image_prompt: on hands and knees on floor, head raised, looking at viewer
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [crawl, hands and knees]
+        - id: floor_side_sit
+          name: Side Sit
+          posture: kneeling
+          description: Sits beside her folded legs with one hand braced on the floor.
+          body: leaning on braced arm, hips to the side
+          legs: both knees bent to one side, feet tucked
+          arms: one arm braced on floor
+          hands: palm flat on floor
+          head: tilted toward shoulder, eyes up
+          expression: soft smile
+          props: []
+          image_prompt: sitting sideways on floor, legs folded to side, one hand on floor
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [side, mermaid]
+
+    chair_straddle:
+      subtitle: Straddling a Chair
+      environment: bedroom chair
+      triggers: [straddle, "backwards chair", "sit backwards", "straddling"]
+      exit_triggers: ["stand up", "get off", "turn around"]
+      entry: swings a leg over
+      default_activity: backward_sit
+      activities:
+        backward_sit:
+          description: sitting backward on chair
+          triggers: [backward, sit, lean]
+          selection: random
+          poses: [strad_rest_chin, strad_arms_back, strad_tilt]
+        playful:
+          description: teasing from the chair
+          triggers: [tease, smirk, grip]
+          selection: random
+          poses: [strad_grip, strad_rock]
+      poses:
+        - id: strad_rest_chin
+          name: Chin on Backrest
+          posture: seated
+          description: Sits backward with her chin resting on her folded arms over the backrest.
+          body: leaning forward onto backrest
+          legs: legs straddling seat, knees wide, feet flat
+          arms: folded across top of backrest
+          hands: fingers tucked under elbows
+          head: chin on forearms, gaze direct
+          expression: teasing smile
+          props: [chair]
+          image_prompt: sitting backwards on chair, chin on arms on backrest, legs straddling
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [chin, rest]
+        - id: strad_arms_back
+          name: Arms on Backrest
+          posture: seated
+          description: Sits backward with her arms spread along the top of the backrest.
+          body: upright, chest forward
+          legs: knees wide, feet flat or on toes
+          arms: both arms draped along backrest
+          hands: fingers curled over the top rail
+          head: tilted, eyes forward
+          expression: confident smirk
+          props: [chair]
+          image_prompt: straddling chair backwards, arms spread along backrest, upright, smirk
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [arms, spread]
+        - id: strad_tilt
+          name: Tipped Forward
+          posture: seated
+          description: Leans far forward over the backrest so only her toes touch the floor.
+          body: tilted forward, weight on backrest
+          legs: straddling seat, heels lifted
+          arms: elbows on backrest
+          hands: hands dangling over the top
+          head: lowered, eyes up
+          expression: mischievous
+          props: [chair]
+          image_prompt: straddling chair backwards, leaning forward, heels lifted, elbows on backrest
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [tipped, forward]
+        - id: strad_grip
+          name: Gripping the Back
+          posture: seated
+          description: Sits backward gripping the backrest with both hands and looking over her shoulder.
+          body: torso twisted slightly toward viewer
+          legs: knees wide, feet flat
+          arms: arms extended onto backrest
+          hands: both hands gripping top rail
+          head: turned toward viewer, eyes locked
+          expression: bold, playful
+          props: [chair]
+          image_prompt: straddling chair backwards, gripping backrest, looking over shoulder, bold
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [grip, hold]
+        - id: strad_rock
+          name: Rocked Back
+          posture: seated
+          description: Rocks the chair back on two legs with one hand on the rail.
+          body: leaning back, relaxed
+          legs: knees wide, feet braced on floor
+          arms: one hand on backrest, other raised
+          hands: raised hand pushing hair back
+          head: tilted back, eyes half-lidded
+          expression: lazy grin
+          props: [chair]
+          image_prompt: straddling chair, tilted back on two legs, hand pushing hair back
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [rock, tilt]
+
+    undressing_tease:
+      subtitle: Undressing Tease
+      environment: bedroom
+      triggers: [strip, undress, "take off", "undressing"]
+      exit_triggers: ["stop", "put back on", "dress again"]
+      entry: begins to undress slowly
+      default_activity: removing_layer
+      activities:
+        removing_layer:
+          description: removing an outer layer
+          triggers: [jacket, shirt, remove]
+          selection: random
+          poses: [strip_jacket, strip_shirt_lift, strip_glove]
+        teasing:
+          description: teasing before the next step
+          triggers: [tease, pause, turn]
+          selection: random
+          poses: [strip_turn_away, strip_hand_hem]
+      poses:
+        - id: strip_jacket
+          name: Slipping Off Jacket
+          posture: standing
+          description: Slides a jacket off one shoulder while looking at the viewer.
+          body: shoulders rolled, torso angled
+          legs: feet together, weight on one leg
+          arms: one arm pulling jacket down
+          hands: fingers holding jacket collar
+          head: chin dipped, eyes up
+          expression: coy, teasing
+          props: [jacket]
+          image_prompt: standing, sliding jacket off shoulder, looking at viewer, teasing
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [jacket, slip]
+        - id: strip_shirt_lift
+          name: Hem Pause
+          posture: standing
+          description: Holds the hem of her top and pauses with a playful look.
+          body: upright, chest forward
+          legs: feet apart slightly
+          arms: both arms down, hands at hem
+          hands: fingers gripping hem
+          head: tilted, eyes direct
+          expression: playful, daring
+          props: []
+          image_prompt: standing, hands holding hem of shirt, pause, playful, tilted head
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [hem, shirt]
+        - id: strip_glove
+          name: Pulling Off Glove
+          posture: standing
+          description: Pulls off a glove one finger at a time.
+          body: relaxed, slight lean
+          legs: one foot crossed in front
+          arms: one arm raised, other holding glove
+          hands: fingers pulling glove fingertip
+          head: lowered, eyes watching hands then up
+          expression: slow smile
+          props: [glove]
+          image_prompt: standing, pulling off glove finger by finger, eyes up, slow smile
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [glove, fingers]
+        - id: strip_turn_away
+          name: Turning Away
+          posture: standing
+          description: Turns her back and looks over her shoulder while loosening her hair.
+          body: back to viewer, torso twisted
+          legs: one foot slightly forward
+          arms: both arms up to hair
+          hands: fingers releasing hair clip
+          head: over shoulder, eyes direct
+          expression: knowing smile
+          props: []
+          image_prompt: standing from behind, hands in hair, looking over shoulder, knowing smile
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [turn, back]
+        - id: strip_hand_hem
+          name: Fingers on Collar
+          posture: standing
+          description: Traces her collar with one hand while leaning her head to the side.
+          body: slightly arched, shoulders back
+          legs: legs crossed at ankle
+          arms: one hand at collar, other at side
+          hands: fingertips tracing neckline
+          head: tilted, eyes lidded
+          expression: sultry
+          props: []
+          image_prompt: standing, fingers tracing collar, head tilted, lidded eyes
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [collar, trace]
+
+    table_bend:
+      subtitle: Bending Over Table
+      environment: table
+      triggers: [table, "over the table", "lean on the table", bending]
+      exit_triggers: ["stand upright", "step back", "leave the table"]
+      entry: leans toward the table
+      default_activity: leaning_forward
+      activities:
+        leaning_forward:
+          description: leaning forward on table
+          triggers: [lean, forward, elbows]
+          selection: random
+          poses: [table_forearms, table_palms, table_pick_up]
+        reaching:
+          description: reaching across table
+          triggers: [reach, stretch, across]
+          selection: random
+          poses: [table_reach, table_look_back]
+      poses:
+        - id: table_forearms
+          name: Forearms Down
+          posture: standing
+          description: Bends forward with both forearms flat on the table.
+          body: bent at the waist, back flat
+          legs: feet apart, knees slightly bent
+          arms: forearms flat on table
+          hands: fingers loosely interlaced
+          head: lifted, eyes forward
+          expression: teasing
+          props: [table]
+          image_prompt: standing, bent forward at waist, forearms on table, head raised, teasing
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [forearms, bend]
+        - id: table_palms
+          name: Palms Flat
+          posture: standing
+          description: Braces both palms on the table edge and leans her weight forward.
+          body: leaning forward, arms straight
+          legs: feet shoulder-width, one foot back
+          arms: arms straight, locked
+          hands: palms flat on table edge
+          head: chin up, gaze direct
+          expression: bold, confident
+          props: [table]
+          image_prompt: standing, palms flat on table, leaning forward, arms straight, bold look
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [palms, brace]
+        - id: table_pick_up
+          name: Picking Up Item
+          posture: standing
+          description: Bends from the waist to pick up something on the far side of the table.
+          body: bent forward, one arm extended
+          legs: one leg lifted slightly behind
+          arms: one arm extended, other on table
+          hands: fingers closing on object
+          head: lowered, eyes on object
+          expression: absorbed
+          props: [table, item]
+          image_prompt: standing, bent over table, reaching for object, one leg lifted behind
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [pick, grab]
+        - id: table_reach
+          name: Reaching Across
+          posture: standing
+          description: Stretches across the table toward the viewer, one hand extended.
+          body: stretched long, torso low over tabletop
+          legs: up on toes, feet together
+          arms: one arm fully extended
+          hands: open palm reaching toward viewer
+          head: chin on table-level, eyes on viewer
+          expression: playful
+          props: [table]
+          image_prompt: stretched across table, arm extended toward viewer, on tiptoe, playful
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [across, reach]
+        - id: table_look_back
+          name: Glance Back
+          posture: standing
+          description: Leans on the table with her back to the viewer and looks back over her shoulder.
+          body: bent forward, spine arched
+          legs: feet apart, knees soft
+          arms: hands on table, elbows slightly bent
+          hands: palms on table
+          head: turned over shoulder, eyes direct
+          expression: coy
+          props: [table]
+          image_prompt: from behind, leaning on table, palms down, looking over shoulder, coy
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [glance, back]

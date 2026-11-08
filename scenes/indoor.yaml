@@ -1,0 +1,1115 @@
+scenes:
+  provocative:
+    couch_sitting:
+      subtitle: Sitting on Couch
+      environment: living room couch
+      triggers: [couch, sofa, "on the couch", "sit down"]
+      exit_triggers: ["get up", "stand up", "leave the couch"]
+      entry: settles onto the couch
+      default_activity: lounging
+      activities:
+        lounging:
+          description: lounging back lazily
+          triggers: [relax, lounge, comfy]
+          selection: random
+          poses: [couch_sprawl, couch_curl, couch_legs_up, couch_hands_raised]
+        attentive:
+          description: leaning in to talk
+          triggers: [talk, listen, close]
+          selection: random
+          poses: [couch_lean_in, couch_cross, couch_knees_wide, couch_knee_on_cushion]
+      poses:
+        - id: couch_sprawl
+          name: Lazy Sprawl
+          posture: seated
+          description: Sinks into the cushions with one arm draped along the backrest.
+          body: reclined, back against cushion, chest open
+          legs: knees apart slightly, one foot flat, other stretched out
+          arms: right arm along backrest, left resting on thigh
+          hands: fingers relaxed, loosely curled
+          head: tilted back slightly, gaze lowered toward viewer
+          expression: lazy half-smile
+          props: [cushion]
+          image_prompt: sitting on couch, reclined, arm along backrest, relaxed sprawl, one leg extended
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [sprawl, lazy]
+        - id: couch_curl
+          name: Curled Up
+          posture: seated
+          description: Tucks both legs beneath her and leans sideways into the armrest.
+          body: angled sideways, shoulder against armrest
+          legs: both legs folded beneath, feet tucked
+          arms: one arm hugging a cushion
+          hands: fingers gripping cushion edge
+          head: resting toward shoulder, eyes looking up
+          expression: soft, shy smile
+          props: [cushion, armrest]
+          image_prompt: curled up on couch, legs tucked, hugging cushion, leaning on armrest
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [curl, cozy]
+        - id: couch_legs_up
+          name: Legs Over Arm
+          posture: seated
+          description: Sits sideways with both legs swung over the armrest.
+          body: leaning back, torso twisted slightly
+          legs: both legs draped over armrest, ankles crossed
+          arms: hands behind head
+          hands: fingers laced behind head
+          head: tipped back, chin raised
+          expression: playful smirk
+          props: [armrest]
+          image_prompt: sitting sideways on couch, legs over armrest, hands behind head, ankles crossed
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [legs, drape]
+        - id: couch_lean_in
+          name: Leaning In
+          posture: seated
+          description: Perches on the cushion edge and leans forward toward the viewer.
+          body: torso forward, back arched slightly
+          legs: knees together, feet flat
+          arms: forearms on thighs
+          hands: fingers clasped between knees
+          head: chin lowered, eyes up
+          expression: intent, teasing
+          props: []
+          image_prompt: sitting on couch edge, leaning forward, forearms on knees, looking up
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [lean, closer]
+        - id: couch_cross
+          name: Legs Crossed
+          posture: seated
+          description: Sits upright with one leg crossed over the other, one hand resting on the cushion beside her.
+          body: upright, shoulders back
+          legs: crossed at knee, top foot pointed
+          arms: one hand on knee, other on cushion
+          hands: fingertips lightly tracing fabric
+          head: turned over shoulder, eyes sideways
+          expression: coy
+          props: []
+          image_prompt: sitting on couch, legs crossed, upright posture, glancing sideways
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [cross, poised]
+        - id: couch_knees_wide
+          name: Wide Knees
+          posture: seated
+          description: Sits on the couch leaning slightly forward with knees wide apart and a hand on each thigh.
+          body: leaning slightly forward, spine upright, shoulders square
+          legs: knees wide apart, feet planted flat and apart
+          arms: both arms extended down to the thighs
+          hands: one hand on each thigh, fingers spread
+          head: chin level, gaze direct
+          expression: confident, intent
+          props: [couch]
+          image_prompt: sitting on couch, knees wide apart, feet flat, hands on thighs, leaning forward, direct gaze
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [wide, thighs]
+        - id: couch_hands_raised
+          name: Hands Beside Head
+          posture: seated
+          description: Sits back on the couch with legs stretched out wide and both hands raised beside her head.
+          body: leaning back slightly, spine straight
+          legs: knees apart, legs stretched out wide, feet extended
+          arms: both elbows bent, hands raised to head height
+          hands: open palms facing inward beside the head
+          head: chin level, looking forward
+          expression: animated, expressive
+          props: [couch]
+          image_prompt: sitting on couch, legs stretched wide, both hands raised beside head, expressive
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [raised, gesture]
+        - id: couch_knee_on_cushion
+          name: Knee on Cushion
+          posture: kneeling
+          description: Leans forward over the couch with one knee on the cushion and arms braced, looking back at the viewer.
+          body: leaning forward over the backrest, back slightly arched, torso angled
+          legs: one knee on the cushion, other leg straight with heel lifted
+          arms: one arm braced on the backrest, other on the armrest
+          hands: palms gripping the couch back
+          head: turned over shoulder, gaze direct
+          expression: coy, direct
+          props: [couch, backrest]
+          image_prompt: leaning over couch, one knee on cushion, hands on backrest, looking over shoulder
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [cushion, backrest]
+
+    chair_sitting:
+      subtitle: Sitting on Chair
+      environment: bedroom chair
+      triggers: [chair, armchair, "on the chair", "take a seat"]
+      exit_triggers: ["stand up", "get up", "leave the chair"]
+      entry: sits down on the chair
+      default_activity: seated_pose
+      activities:
+        seated_pose:
+          description: sitting upright, composed
+          triggers: [sit, upright, posed]
+          selection: random
+          poses: [chair_upright, chair_cross, chair_perch]
+        casual:
+          description: slouching or leaning back
+          triggers: [slouch, relax, tilt]
+          selection: random
+          poses: [chair_tilt, chair_sideways, chair_legs_raised, chair_feet_on_desk, chair_wide_grip]
+      poses:
+        - id: chair_upright
+          name: Upright Poise
+          posture: seated
+          description: Sits tall with spine straight and hands folded in her lap.
+          body: upright, shoulders back, chin level
+          legs: knees together, feet flat
+          arms: elbows close, forearms in lap
+          hands: fingers interlaced on lap
+          head: level, gaze direct
+          expression: calm, composed
+          props: [chair]
+          image_prompt: sitting on chair, upright posture, hands folded in lap, knees together
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [upright, formal]
+        - id: chair_cross
+          name: Crossed Legs
+          posture: seated
+          description: Crosses her legs and rests one elbow on the chair arm.
+          body: leaning slightly to one side
+          legs: crossed at knee, foot dangling
+          arms: elbow on armrest
+          hands: chin resting on fingertips
+          head: tilted, gaze steady
+          expression: thoughtful smirk
+          props: [chair]
+          image_prompt: sitting on chair, legs crossed, elbow on armrest, chin on hand
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [cross, elbow]
+        - id: chair_perch
+          name: Edge Perch
+          posture: seated
+          description: Perches on the front edge with her torso angled forward.
+          body: leaning forward, back arched
+          legs: knees apart slightly, heels lifted
+          arms: hands braced on knees
+          hands: palms flat on knees
+          head: chin down, eyes up
+          expression: eager, teasing
+          props: [chair]
+          image_prompt: sitting on edge of chair, leaning forward, hands on knees, looking up
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [edge, forward]
+        - id: chair_tilt
+          name: Tilted Back
+          posture: seated
+          description: Leans back with the chair tilted and one foot propped.
+          body: reclined, relaxed shoulders
+          legs: one foot propped on edge of table or rung, other extended
+          arms: hands behind head
+          hands: fingers laced behind head
+          head: tilted back, eyes half-lidded
+          expression: lazy confidence
+          props: [chair]
+          image_prompt: leaning back in chair, hands behind head, foot propped, relaxed
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [tilt, lean back]
+        - id: chair_sideways
+          name: Sideways Sit
+          posture: seated
+          description: Sits sideways with both legs draped over the chair arm.
+          body: twisted, back against the other arm
+          legs: both legs over armrest, ankles crossed
+          arms: one arm along backrest
+          hands: fingers trailing loosely
+          head: turned toward viewer, gaze playful
+          expression: mischievous grin
+          props: [chair]
+          image_prompt: sitting sideways in chair, legs over armrest, arm along backrest
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [sideways, drape]
+        - id: chair_legs_raised
+          name: Legs Raised
+          posture: seated
+          description: Reclines deeply in the chair with one leg lifted high and the other knee bent.
+          body: reclined deep into chair, torso angled
+          legs: one leg raised high in the air, other knee bent with foot on desk edge
+          arms: one hand resting on raised thigh
+          hands: fingers resting on thigh
+          head: tilted, gaze direct
+          expression: smoldering, confident
+          props: [office chair, desk]
+          image_prompt: reclined in office chair, one leg raised high, other knee bent, hand on thigh, head tilted
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [raised, reclined]
+        - id: chair_feet_on_desk
+          name: Feet on Desk
+          posture: seated
+          description: Reclines in the chair with both legs extended and heels resting on the desk.
+          body: reclined, shoulders relaxed, torso angled toward viewer
+          legs: both legs fully extended, heels resting on desk
+          arms: arms bent in front of lap
+          hands: both hands holding at her waist
+          head: tilted, eyes direct
+          expression: playful, knowing smile
+          props: [office chair, desk]
+          image_prompt: reclined in office chair, both legs extended, heels on desk, hands at waist, smiling
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [feet, desk]
+        - id: chair_wide_grip
+          name: Gripping the Seat
+          posture: seated
+          description: Sits in a low chair with knees wide, torso leaning slightly forward and hands gripping the seat edges.
+          body: leaning slightly forward, shoulders drawn in
+          legs: knees wide apart, feet planted flat and apart
+          arms: both arms down and in, elbows slightly bent
+          hands: fingers gripping the seat edge beside the hips
+          head: tilted, chin lowered, eyes up
+          expression: coy smirk
+          props: [chair]
+          image_prompt: sitting in low chair, knees wide, hands gripping seat edges, leaning forward, chin down, looking up
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [grip, wide]
+
+    bed_lying:
+      subtitle: Lying on the Bed
+      environment: bedroom bed
+      triggers: [bed, "lie down", "on the bed", "lying"]
+      exit_triggers: ["get up", "sit up", "leave the bed"]
+      entry: lies down on the bed
+      default_activity: resting
+      activities:
+        resting:
+          description: lying and relaxing
+          triggers: [rest, relax, sleep]
+          selection: random
+          poses: [bed_back_stretch, bed_side, bed_curl, bed_side_crossed]
+        playful:
+          description: lying in a teasing pose
+          triggers: [tease, roll, play]
+          selection: random
+          poses: [bed_stomach, bed_propped, bed_forearms_hips_up, bed_hands_knees]
+      poses:
+        - id: bed_back_stretch
+          name: Back Stretch
+          posture: lying
+          description: Lies on her back with arms stretched above her head.
+          body: flat on back, spine slightly arched
+          legs: one knee bent, other extended
+          arms: both arms overhead
+          hands: fingers loosely curled on pillow
+          head: turned to one side, gaze toward viewer
+          expression: sleepy smile
+          props: [pillow]
+          image_prompt: lying on back on bed, arms overhead, one knee bent, stretching
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [stretch, back]
+        - id: bed_side
+          name: Side Recline
+          posture: lying
+          description: Lies on her side propped on one elbow.
+          body: side-lying, torso lifted on elbow
+          legs: stacked, top knee bent forward
+          arms: lower elbow supporting head
+          hands: free hand resting on hip
+          head: held up by hand, eyes direct
+          expression: warm, inviting
+          props: [pillow]
+          image_prompt: lying on side on bed, propped on elbow, hand on hip, knee bent
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [side, elbow]
+        - id: bed_curl
+          name: Curled Sleep
+          posture: lying
+          description: Curls into a ball on her side hugging a pillow.
+          body: curled, shoulders rounded
+          legs: knees drawn toward chest
+          arms: both arms around pillow
+          hands: gripping pillow
+          head: nestled into pillow, eyes half-closed
+          expression: peaceful
+          props: [pillow]
+          image_prompt: curled up on bed, hugging pillow, knees to chest, side view
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [curl, sleep]
+        - id: bed_stomach
+          name: Stomach Kick
+          posture: lying
+          description: Lies on her stomach with ankles crossed in the air.
+          body: prone, chest raised on forearms
+          legs: knees bent, ankles crossed in air
+          arms: forearms flat on mattress
+          hands: chin resting on stacked fists
+          head: lifted, gaze forward
+          expression: playful grin
+          props: []
+          image_prompt: lying on stomach on bed, ankles crossed in air, chin on hands
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [stomach, kick]
+        - id: bed_propped
+          name: Propped on Pillows
+          posture: lying
+          description: Reclines against stacked pillows with one leg bent.
+          body: semi-upright, back against pillows
+          legs: one knee up, other flat
+          arms: one arm behind head
+          hands: other hand resting on stomach
+          head: tilted back, eyes lidded
+          expression: languid
+          props: [pillows]
+          image_prompt: reclining on bed against pillows, one knee up, hand behind head
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [propped, pillows]
+        - id: bed_side_crossed
+          name: Side Recline, Ankles Crossed
+          posture: lying
+          description: Lies propped on one side with legs extended and crossed at the ankles, holding the edges of a jacket.
+          body: side-lying, upper body propped up
+          legs: legs extended, ankles crossed
+          arms: both arms bent in front of chest
+          hands: both hands holding jacket edges
+          head: tilted, eyes up toward viewer
+          expression: sultry
+          props: []
+          image_prompt: lying on side on bed, propped up, legs extended, ankles crossed, hands holding jacket, viewed from above
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [crossed, jacket]
+        - id: bed_forearms_hips_up
+          name: Forearms and Knees
+          posture: kneeling
+          description: Rests on forearms and knees on the bed, hips raised, looking back at the viewer.
+          body: forearms down, hips raised, back arched
+          legs: knees apart, lower legs resting flat
+          arms: both forearms flat on mattress
+          hands: hands folded under chin
+          head: turned back toward viewer
+          expression: sly, playful
+          props: []
+          image_prompt: on forearms and knees on bed, back arched, looking back over shoulder, playful
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [forearms, knees]
+        - id: bed_hands_knees
+          name: Hands and Knees on Bed
+          posture: kneeling
+          description: Rests on hands and knees on the bed with lower legs flat, looking back over her shoulder.
+          body: horizontal, spine slightly arched
+          legs: knees apart, lower legs resting flat behind
+          arms: arms straight, shoulders over wrists
+          hands: palms flat on the mattress
+          head: turned back over shoulder, gaze direct
+          expression: playful, warm
+          props: [bed]
+          image_prompt: on hands and knees on bed, lower legs flat, looking back over shoulder, playful
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [hands and knees, crawl]
+
+    room_standing:
+      subtitle: Standing in the Room
+      environment: bedroom
+      triggers: [standing, stand, "in the room", "stands"]
+      exit_triggers: ["sit down", "lie down", "kneel"]
+      entry: stands in the middle
+      default_activity: posing
+      activities:
+        posing:
+          description: posing confidently
+          triggers: [pose, confident, hips]
+          selection: random
+          poses: [stand_hip, stand_arms_crossed, stand_over_shoulder, stand_hands_knees]
+        idle:
+          description: standing casually
+          triggers: [wait, idle, casual]
+          selection: random
+          poses: [stand_hand_hair, stand_stretch, stand_lean_papers]
+      poses:
+        - id: stand_hip
+          name: Hip Pop
+          posture: standing
+          description: Stands with weight on one leg and a hand on her hip.
+          body: weight shifted, hip jutting out
+          legs: one leg straight, other bent, toe pointing out
+          arms: one hand on hip, other at side
+          hands: fingers splayed on hip
+          head: tilted, gaze direct
+          expression: confident smile
+          props: []
+          image_prompt: standing, weight on one leg, hand on hip, hip tilted, confident
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [hip, confident]
+        - id: stand_arms_crossed
+          name: Arms Crossed
+          posture: standing
+          description: Stands with arms crossed beneath her chest and feet apart.
+          body: upright, shoulders squared
+          legs: feet shoulder-width apart
+          arms: crossed under chest
+          hands: fingers resting on opposite elbows
+          head: chin raised, eyes level
+          expression: challenging smirk
+          props: []
+          image_prompt: standing, arms crossed, feet apart, chin raised, smirk
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [crossed, arms]
+        - id: stand_over_shoulder
+          name: Over the Shoulder
+          posture: standing
+          description: Stands with her back to the viewer, glancing over her shoulder.
+          body: turned away, torso twisted back
+          legs: one foot slightly ahead
+          arms: hands behind or at sides
+          hands: fingers loosely clasped behind her
+          head: turned over shoulder, eyes direct
+          expression: coy, knowing
+          props: []
+          image_prompt: standing from behind, looking over shoulder, torso twisted, hands clasped behind
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [shoulder, behind]
+        - id: stand_hand_hair
+          name: Hand in Hair
+          posture: standing
+          description: Stands relaxed and runs one hand up through her hair.
+          body: slightly arched, chest open
+          legs: feet together, one knee softly bent
+          arms: one arm raised to head
+          hands: fingers threading through hair
+          head: tilted back slightly, eyes half-closed
+          expression: relaxed, sultry
+          props: []
+          image_prompt: standing, hand in hair, arm raised, head tilted back, relaxed
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [hair, raise]
+        - id: stand_stretch
+          name: Standing Stretch
+          posture: standing
+          description: Stretches both arms overhead with her back arching.
+          body: elongated, back arched
+          legs: feet apart, up on toes
+          arms: both arms overhead, fingers interlaced
+          hands: palms facing up
+          head: tilted back, eyes closed
+          expression: contented sigh
+          props: []
+          image_prompt: standing stretch, arms overhead, back arched, on tiptoes, eyes closed
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [stretch, yawn]
+        - id: stand_hands_knees
+          name: Hands on Knees
+          posture: standing
+          description: Stands bent forward with both hands resting on her knees, looking at the viewer.
+          body: bent forward at the hips, torso angled toward viewer
+          legs: knees bent and together, feet apart
+          arms: arms straight down to the knees
+          hands: both hands resting on the knees
+          head: raised, eyes direct
+          expression: open, wide-eyed
+          props: []
+          image_prompt: standing bent forward, hands on knees, knees bent, looking at viewer
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [bend, knees]
+        - id: stand_lean_papers
+          name: Leaning Over Papers
+          posture: standing
+          description: Leans a hip against a shelf with one hand flat on a stack of papers and the other at her neckline, looking down.
+          body: weight shifted, hip against shelf, slight twist
+          legs: one leg straight, other knee bent forward and out
+          arms: one arm extended to the surface, other bent to the chest
+          hands: one hand flat on papers, other at the neckline
+          head: turned toward the surface, gaze lowered
+          expression: absorbed, curious
+          props: [shelf, papers]
+          image_prompt: standing, hip against shelf, hand flat on papers, other hand at neckline, looking down
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [papers, shelf, lean]
+
+    meal_table:
+      subtitle: Having a Meal
+      environment: kitchen table
+      triggers: [meal, eat, dinner, "having dinner"]
+      exit_triggers: ["finished eating", "clear the table", "leave the table"]
+      entry: sits at the table
+      default_activity: eating
+      activities:
+        eating:
+          description: eating a meal
+          triggers: [eat, bite, fork]
+          selection: random
+          poses: [meal_fork, meal_sip, meal_lean]
+        chatting:
+          description: talking over food
+          triggers: [talk, chat, laugh]
+          selection: random
+          poses: [meal_chin_hand, meal_feed]
+      poses:
+        - id: meal_fork
+          name: Fork to Lips
+          posture: seated
+          description: Raises a forkful of food to her lips.
+          body: upright, slight forward lean
+          legs: legs crossed under table
+          arms: one elbow on table, other hand holding fork
+          hands: fork raised, other hand on table
+          head: tilted slightly, eyes on viewer
+          expression: playful
+          props: [fork, plate]
+          image_prompt: sitting at table, raising fork to lips, eating, eye contact
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [fork, bite]
+        - id: meal_sip
+          name: Sipping Drink
+          posture: seated
+          description: Sips from a glass with her gaze over the rim.
+          body: leaning back slightly
+          legs: crossed at the ankle
+          arms: one arm bent holding glass
+          hands: fingers around glass stem
+          head: tilted, eyes over rim
+          expression: knowing look
+          props: [glass]
+          image_prompt: sitting at table, sipping glass, eyes over rim, relaxed
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [sip, drink]
+        - id: meal_lean
+          name: Elbows on Table
+          posture: seated
+          description: Leans forward with both elbows on the table.
+          body: forward lean, shoulders relaxed
+          legs: feet tucked back
+          arms: both elbows on table
+          hands: hands clasped under chin
+          head: chin on hands, eyes bright
+          expression: attentive, warm
+          props: [table]
+          image_prompt: sitting at table, leaning forward, elbows on table, chin on clasped hands
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [elbows, lean]
+        - id: meal_chin_hand
+          name: Chin in Hand
+          posture: seated
+          description: Rests her cheek on one hand and toys with her food.
+          body: slouched slightly, relaxed
+          legs: one knee over the other
+          arms: one elbow on table
+          hands: free hand pushing food with fork
+          head: tilted into hand, eyes lowered then up
+          expression: amused
+          props: [fork, plate]
+          image_prompt: sitting at table, cheek on hand, poking food with fork, amused
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [chin, toy]
+        - id: meal_feed
+          name: Offering a Bite
+          posture: seated
+          description: Holds out a bite of food on a fork toward the viewer.
+          body: leaning forward, arm extended
+          legs: feet flat under table
+          arms: one arm extended
+          hands: fork offered, other hand beneath it
+          head: tilted, eyes direct
+          expression: inviting smile
+          props: [fork]
+          image_prompt: sitting at table, offering fork forward, leaning in, inviting smile
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [offer, feed]
+
+    kitchen_cooking:
+      subtitle: Cooking
+      environment: kitchen
+      triggers: [cook, cooking, "in the kitchen", stove]
+      exit_triggers: ["dinner is ready", "stop cooking", "leave the kitchen"]
+      entry: turns to the stove
+      default_activity: stirring
+      activities:
+        stirring:
+          description: stirring and tasting
+          triggers: [stir, taste, pan]
+          selection: random
+          poses: [cook_stir, cook_taste, cook_lean_counter]
+        prepping:
+          description: chopping and preparing
+          triggers: [chop, prep, knife]
+          selection: random
+          poses: [cook_chop, cook_reach_shelf]
+      poses:
+        - id: cook_stir
+          name: Stirring Pot
+          posture: standing
+          description: Stands at the stove stirring a pot with a wooden spoon.
+          body: slight forward lean, shoulders relaxed
+          legs: feet apart, weight shifted
+          arms: one arm extended with spoon
+          hands: one hand on spoon, other on counter
+          head: lowered toward pot, eyes sideways
+          expression: focused, content
+          props: [pot, spoon]
+          image_prompt: standing at stove, stirring pot with spoon, leaning slightly, looking sideways
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [stir, pot]
+        - id: cook_taste
+          name: Tasting Spoon
+          posture: standing
+          description: Lifts a spoon to her lips to taste with her free hand cupped beneath.
+          body: upright, head tilted
+          legs: feet together
+          arms: one arm raised, other hand under spoon
+          hands: spoon at lips, palm cupped below
+          head: tilted, eyes closed or lowered
+          expression: savoring
+          props: [spoon]
+          image_prompt: standing, tasting spoon, hand cupped beneath, eyes closed, savoring
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [taste, spoon]
+        - id: cook_lean_counter
+          name: Leaning on Counter
+          posture: standing
+          description: Leans a hip on the counter while waiting, arms folded.
+          body: leaning sideways, relaxed
+          legs: legs crossed at ankle
+          arms: folded in front
+          hands: fingers tucked into elbows
+          head: tilted, eyes on viewer
+          expression: patient, teasing
+          props: [counter]
+          image_prompt: standing, hip against counter, arms folded, legs crossed at ankle, teasing
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [lean, wait]
+        - id: cook_chop
+          name: Chopping
+          posture: standing
+          description: Chops vegetables with her focus on the board.
+          body: bent slightly forward over counter
+          legs: feet shoulder-width apart
+          arms: both arms forward, elbows bent
+          hands: one holding knife, other steadying vegetable
+          head: lowered, eyes on board
+          expression: concentrated
+          props: [knife, cutting board]
+          image_prompt: standing at counter, chopping vegetables, leaning forward, focused
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [chop, knife]
+        - id: cook_reach_shelf
+          name: Reaching Up
+          posture: standing
+          description: Rises on tiptoe to reach a jar on a high shelf.
+          body: stretched upward, back lengthened
+          legs: up on tiptoes, one knee slightly bent
+          arms: one arm fully extended upward
+          hands: fingers stretching toward jar, other hand on counter
+          head: tilted back, eyes on shelf
+          expression: determined, amused
+          props: [shelf, jar]
+          image_prompt: standing on tiptoe, reaching high shelf, arm extended, other hand on counter
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [reach, shelf]
+
+    wall_lean:
+      subtitle: Leaning Against Wall
+      environment: hallway wall
+      triggers: [wall, "against the wall", "lean on the wall", leaning]
+      exit_triggers: ["step away", "walk off", "push off"]
+      entry: leans back against the wall
+      default_activity: casual_lean
+      activities:
+        casual_lean:
+          description: leaning back casually
+          triggers: [casual, lean, relax]
+          selection: random
+          poses: [wall_back, wall_shoulder, wall_foot_up]
+        inviting:
+          description: leaning in invitingly
+          triggers: [lure, beckon, near]
+          selection: random
+          poses: [wall_hand_beside, wall_beckon]
+      poses:
+        - id: wall_back
+          name: Back to Wall
+          posture: standing
+          description: Leans her back flat against the wall with arms crossed.
+          body: back flat on wall, shoulders relaxed
+          legs: feet forward, one knee slightly bent
+          arms: crossed in front
+          hands: fingers on opposite arms
+          head: tilted, eyes direct
+          expression: cool, amused
+          props: [wall]
+          image_prompt: standing, back against wall, arms crossed, knee bent, cool look
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [back, arms]
+        - id: wall_shoulder
+          name: Shoulder Lean
+          posture: standing
+          description: Leans a shoulder on the wall with one hand in her pocket.
+          body: turned sideways, shoulder to wall
+          legs: ankles crossed
+          arms: one hand in pocket
+          hands: other hand resting on wall
+          head: tilted toward viewer
+          expression: easy smirk
+          props: [wall]
+          image_prompt: leaning shoulder on wall, hand in pocket, ankles crossed, smirk
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [shoulder, pocket]
+        - id: wall_foot_up
+          name: Foot on Wall
+          posture: standing
+          description: Leans back with one foot planted flat on the wall behind her.
+          body: leaning back, hips forward
+          legs: one leg straight, other knee bent with sole on wall
+          arms: arms loose at sides
+          hands: palms flat on wall
+          head: tilted back against wall, eyes lidded
+          expression: nonchalant
+          props: [wall]
+          image_prompt: leaning on wall, one foot on wall, palms on wall, nonchalant
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [foot, bent knee]
+        - id: wall_hand_beside
+          name: Hand Beside Her Head
+          posture: standing
+          description: Leans with one forearm on the wall beside her head, facing the viewer.
+          body: turned toward viewer, one shoulder on wall
+          legs: feet apart slightly
+          arms: one forearm on wall above head
+          hands: other hand on hip
+          head: tilted against forearm, eyes direct
+          expression: confident, inviting
+          props: [wall]
+          image_prompt: leaning on wall, forearm above head, hand on hip, facing viewer, inviting
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [forearm, beside]
+        - id: wall_beckon
+          name: Beckoning Finger
+          posture: standing
+          description: Leans on the wall and beckons the viewer closer with one finger.
+          body: relaxed lean, hips tilted
+          legs: legs crossed at ankle
+          arms: one arm extended toward viewer
+          hands: index finger curling to beckon
+          head: head tilted, eyes direct
+          expression: sly smile
+          props: [wall]
+          image_prompt: leaning on wall, beckoning with finger, ankles crossed, sly smile
+          negative_prompt: extra limbs, bad hands, deformed, nudity
+          triggers: [beckon, finger]
+    desk_perch:
+      subtitle: Perched on Desk
+      environment: office desk
+      triggers: [desk, "on the desk", "office desk", "sit on the desk"]
+      exit_triggers: ["get off the desk", "stand up", "leave the desk"]
+      entry: perches on the desk edge
+      default_activity: sitting_on_desk
+      activities:
+        sitting_on_desk:
+          description: sitting on the desk
+          triggers: [sit, perch, edge]
+          selection: random
+          poses: [desk_side_perch, desk_knees_apart, desk_knee_recline, desk_feet_planted]
+        leaning_on_desk:
+          description: leaning against the desk
+          triggers: [lean, pose, stretch]
+          selection: random
+          poses: [desk_hip_lean, desk_foot_up, desk_bend_knee_up]
+        working_at_desk:
+          description: seated at the desk working
+          triggers: [work, type, laptop, computer]
+          selection: random
+          poses: [desk_seated_typing]
+      poses:
+        - id: desk_side_perch
+          name: Side Perch
+          posture: seated
+          description: Sits on the desk edge with both legs extended long toward the floor.
+          body: upright, torso angled toward viewer
+          legs: legs extended and angled to one side, feet pointed
+          arms: one hand on thigh, other hand resting on knee
+          hands: fingers resting lightly on knee
+          head: tilted slightly, gaze direct
+          expression: poised, confident
+          props: [desk]
+          image_prompt: sitting on desk edge, legs extended long, hands on thigh and knee, torso angled, poised
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [side, edge]
+        - id: desk_knees_apart
+          name: Leaning Back, Knees Apart
+          posture: seated
+          description: Sits on the desktop leaning back with knees apart and one hand on her ankle.
+          body: leaning back, shoulders relaxed
+          legs: knees wide apart, feet planted flat on desktop
+          arms: one arm reaching down, other braced behind
+          hands: one hand holding ankle
+          head: tilted to the side, gaze direct
+          expression: confident, smoldering
+          props: [desk]
+          image_prompt: sitting on desk, leaning back, knees apart, feet on desktop, hand on ankle, head tilted
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [knees, apart]
+        - id: desk_knee_recline
+          name: Knee-Up Recline
+          posture: seated
+          description: Reclines on the desktop propped on one hand with one knee raised high.
+          body: leaning back and sideways, propped on one arm
+          legs: one knee raised high, other leg extended along desk
+          arms: one arm braced behind, other resting on desk
+          hands: fingers splayed on desktop
+          head: tilted, gaze toward viewer
+          expression: warm, playful smile
+          props: [desk]
+          image_prompt: sitting on desk, leaning back on one hand, one knee raised, other leg extended, smiling
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [recline, knee]
+        - id: desk_feet_planted
+          name: Feet Planted
+          posture: seated
+          description: Sits on the desk with knees apart and feet planted, leaning forward slightly.
+          body: leaning forward, shoulders rounded in
+          legs: knees apart, both feet flat on desktop
+          arms: both elbows tucked in
+          hands: both hands clasped together at the chest
+          head: tilted, chin lowered, eyes up
+          expression: coy, knowing
+          props: [desk]
+          image_prompt: sitting on desk, knees apart, feet flat on desktop, hands clasped at chest, chin down
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [feet, clasp]
+        - id: desk_hip_lean
+          name: Hip Against Desk
+          posture: standing
+          description: Leans one hip against the desk edge with one hand gripping it and the other behind her neck.
+          body: torso arched, leaning sideways into desk
+          legs: legs crossed loosely, one foot forward
+          arms: one hand gripping desk edge, other raised behind neck
+          hands: fingers curled over desk edge
+          head: tilted back, eyes closed
+          expression: dreamy, sultry
+          props: [desk]
+          image_prompt: standing, hip against desk, hand behind neck, back arched, head tilted back, eyes closed
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [hip, neck]
+        - id: desk_foot_up
+          name: One Foot Up
+          posture: standing
+          description: Stands against the desk with one foot raised and resting behind her, both hands in her hair.
+          body: twisted toward viewer, hips against desk
+          legs: standing leg straight, other knee bent with foot raised behind
+          arms: both arms raised overhead
+          hands: fingers running through hair
+          head: tilted, looking toward viewer
+          expression: playful smile
+          props: [desk]
+          image_prompt: standing, one foot raised behind, hips against desk, both hands in hair, twisted torso, smiling
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [foot, hair]
+        - id: desk_bend_knee_up
+          name: Knee on Desk
+          posture: standing
+          description: Leans forward onto the desk with one knee raised onto it, looking back over her shoulder.
+          body: bent forward at waist, torso resting on desk edge
+          legs: one leg straight on floor, other knee raised onto desk
+          arms: forearm braced on desktop
+          hands: other hand on desk edge
+          head: turned over shoulder, gaze direct
+          expression: coy, direct
+          props: [desk]
+          image_prompt: leaning on desk, one knee raised onto desk, looking over shoulder, forearm braced
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [knee, over shoulder]
+        - id: desk_seated_typing
+          name: Working at Laptop
+          posture: seated
+          description: Sits at a desk facing it with knees wide, one hand on a laptop and the other at her collar, gazing at the screen.
+          body: upright, turned slightly toward the screen
+          legs: knees wide apart, feet planted flat on the floor
+          arms: one arm forward on the desk, other bent to the chest
+          hands: one hand on the laptop, other at the neckline
+          head: turned toward the screen, gaze on the screen
+          expression: absorbed, curious
+          props: [desk, laptop, office chair]
+          image_prompt: seated at desk, knees wide, hand on laptop, other hand at collar, looking at screen
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [laptop, work, type]
+
+    bed_sitting:
+      subtitle: Sitting on the Bed
+      environment: bedroom bed
+      triggers: ["sit on the bed", "sits on the bed", "edge of the bed", "sitting on the bed"]
+      exit_triggers: ["get up", "stand up", "lie back"]
+      entry: sits on the bed edge
+      default_activity: edge_sit
+      activities:
+        edge_sit:
+          description: sitting on the bed edge
+          triggers: [edge, sit, perch]
+          selection: random
+          poses: [bedsit_edge_holding, bedsit_arms_overhead, bedsit_edge_cross]
+        leaning:
+          description: leaning in or back
+          triggers: [lean, recline, headboard]
+          selection: random
+          poses: [bedsit_headboard, bedsit_lean_forward, bedsit_headboard_kneel]
+      poses:
+        - id: bedsit_headboard
+          name: Against Headboard
+          posture: seated
+          description: Reclines against the pillows with knees raised and apart and one hand behind her head.
+          body: leaning back against pillows, relaxed
+          legs: knees raised and apart, feet flat on mattress
+          arms: one arm raised behind head
+          hands: fingers touching hair behind ear
+          head: tilted, eyes direct
+          expression: sly, inviting
+          props: [pillows, headboard]
+          image_prompt: sitting against headboard, knees raised, hand behind head, reclined, head tilted, sly smile
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [headboard, pillows]
+        - id: bedsit_edge_holding
+          name: Holding a Coat
+          posture: seated
+          description: Sits on the bed edge with knees apart, holding a coat draped across her lap.
+          body: slight lean toward viewer, one shoulder dropped
+          legs: knees apart, lower legs crossed at the ankle
+          arms: both arms resting on the coat in her lap
+          hands: both hands gripping the coat
+          head: tilted, eyes direct
+          expression: playful, lips parted
+          props: [coat]
+          image_prompt: sitting on bed edge, knees apart, ankles crossed, holding coat in lap, head tilted
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [coat, hold]
+        - id: bedsit_arms_overhead
+          name: Arms Overhead
+          posture: seated
+          description: Sits on the bed edge with both arms raised and hands clasped above her head.
+          body: upright, back slightly arched, chest lifted
+          legs: knees apart, feet flat on floor
+          arms: both arms raised overhead
+          hands: hands clasped above head
+          head: tilted, gaze direct
+          expression: confident, sultry
+          props: []
+          image_prompt: sitting on bed edge, arms raised overhead, hands clasped, knees apart, back arched
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [arms, overhead]
+        - id: bedsit_lean_forward
+          name: Leaning Toward Viewer
+          posture: seated
+          description: Leans toward the viewer holding the front of her top closed with both hands.
+          body: torso leaning forward, shoulders rounded
+          legs: knees together, feet tucked beneath bed edge
+          arms: elbows pressed in
+          hands: both hands holding top closed at chest
+          head: chin lowered, eyes up
+          expression: coy, teasing
+          props: []
+          image_prompt: sitting on bed, leaning forward, hands at chest, elbows in, chin down, looking up
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [lean, collar]
+        - id: bedsit_edge_cross
+          name: Crossed at the Edge
+          posture: seated
+          description: Sits on the bed edge with legs crossed, leaning back on both hands.
+          body: leaning back, chest open
+          legs: legs crossed at the knee, top foot pointed
+          arms: both arms straight behind her
+          hands: palms flat on mattress
+          head: tilted back slightly, gaze direct
+          expression: relaxed, flirty
+          props: []
+          image_prompt: sitting on bed edge, legs crossed, leaning back on hands, head tilted back
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [cross, hands]
+        - id: bedsit_headboard_kneel
+          name: Facing Headboard
+          posture: kneeling
+          description: Kneels on the bed facing the headboard with forearms resting on it, looking back over her shoulder with a fingertip at her lips.
+          body: leaning forward onto the headboard, back arched, torso twisted
+          legs: knees apart, kneeling on the mattress
+          arms: forearms stacked along the top of the headboard
+          hands: one hand raised with fingertip to lips
+          head: turned back over shoulder, eyes sideways
+          expression: coy, teasing
+          props: [bed, headboard]
+          image_prompt: kneeling on bed facing headboard, forearms on headboard, looking over shoulder, fingertip at lips
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [headboard, kneel]
+
+    bedside_standing:
+      subtitle: Standing by the Bed
+      environment: bedside
+      triggers: [bedside, "beside the bed", "by the bed", "next to the bed"]
+      exit_triggers: ["get on the bed", "sit down", "walk away"]
+      entry: stops beside the bed
+      default_activity: standing_pose
+      activities:
+        standing_pose:
+          description: posing upright by the bed
+          triggers: [stand, pose, glance]
+          selection: random
+          poses: [bedside_arms_up, bedside_rail_glance]
+        bending_low:
+          description: bending or crouching low
+          triggers: [bend, crouch, reach]
+          selection: random
+          poses: [bedside_bend_thighs, bedside_bend_low, bedside_squat]
+      poses:
+        - id: bedside_arms_up
+          name: Hands Behind Head
+          posture: standing
+          description: Stands with feet wide and both arms raised, hands behind her head.
+          body: hip tilted, torso stretched, chest lifted
+          legs: feet wide apart, weight on one leg
+          arms: both arms raised, elbows out
+          hands: fingers laced behind head
+          head: chin lowered, eyes direct
+          expression: confident, smoldering
+          props: [bed]
+          image_prompt: standing, feet apart, both hands behind head, elbows out, hip tilted, chin down
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [arms, elbows]
+        - id: bedside_rail_glance
+          name: Rail Glance
+          posture: standing
+          description: Stands with her back to the viewer, leaning against the bed rail and glancing over her shoulder.
+          body: back to viewer, torso twisted, leaning on rail
+          legs: feet together, legs straight
+          arms: one hand resting at hip
+          hands: other hand lightly on rail
+          head: over shoulder, eyes direct
+          expression: coy smile
+          props: [bed rail]
+          image_prompt: standing from behind, leaning on bed rail, looking over shoulder, hand on hip, feet together
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [rail, shoulder]
+        - id: bedside_bend_thighs
+          name: Hands on Thighs
+          posture: standing
+          description: Bends forward at the waist beside the bed with hands resting on her thighs.
+          body: bent forward, back flat, seen from behind
+          legs: feet apart, knees slightly bent
+          arms: arms extended down
+          hands: palms resting on thighs
+          head: lowered, hair falling forward
+          expression: unseen, head dipped
+          props: [bed]
+          image_prompt: standing bent forward at waist, hands on thighs, feet apart, from behind, low angle
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [thighs, bend]
+        - id: bedside_bend_low
+          name: Deep Bend
+          posture: standing
+          description: Folds deeply forward with legs wide and one hand on her shin.
+          body: folded forward, torso hanging low
+          legs: legs wide apart, straight
+          arms: one arm hanging, other reaching to shin
+          hands: one hand gripping shin
+          head: hanging low, hair falling forward
+          expression: unseen, head down
+          props: [bed]
+          image_prompt: deep forward bend, legs wide, hand on shin, head hanging, from behind, low angle
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [deep, shin]
+        - id: bedside_squat
+          name: Crouched Twist
+          posture: squatting
+          description: Crouches in a deep squat beside the bed, twisting back with one arm extended behind her.
+          body: deep squat, torso twisted toward viewer
+          legs: knees bent deeply, feet planted flat
+          arms: one arm extended back for balance
+          hands: loose open hand
+          head: turned over shoulder, eyes direct
+          expression: intense, direct
+          props: [bed]
+          image_prompt: deep squat beside bed, torso twisted, one arm extended behind, looking over shoulder
+          negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
+          triggers: [squat, crouch]

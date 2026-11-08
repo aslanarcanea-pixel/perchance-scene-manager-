@@ -1,0 +1,80 @@
+# =====================================================================
+#  Shared definitions: reusable poses, transition rules, fallback scene
+# =====================================================================
+
+pose_library:
+  standing_relaxed:
+    name: Standing relaxed
+    posture: standing
+    description: Standing in a relaxed, natural stance.
+    body: Upright, weight resting slightly on one leg.
+    legs: Feet about hip-width apart.
+    arms: Hanging loosely at the sides.
+    hands: Relaxed, fingers slightly curled.
+    head: Facing the companion.
+    expression: Calm, attentive.
+    image_prompt: standing, relaxed natural stance, arms at sides
+    negative_prompt: stiff pose, extra limbs
+
+  standing_arms_folded:
+    name: Standing with arms loosely folded
+    posture: standing
+    description: Standing with arms loosely folded.
+    body: Upright, shoulders relaxed.
+    legs: Weight shifted onto one hip.
+    arms: Folded loosely across the chest.
+    hands: Tucked against the upper arms.
+    head: Tilted slightly, listening.
+    expression: Thoughtful, slightly amused.
+    image_prompt: standing, arms loosely crossed, head slightly tilted
+    negative_prompt: extra limbs, angry
+
+  seated_relaxed:
+    name: Seated relaxed
+    posture: seated
+    description: Sitting comfortably and relaxed.
+    body: Leaning back slightly against the backrest.
+    legs: One leg crossed over the other.
+    arms: Resting on the lap or armrest.
+    hands: Loosely clasped.
+    head: Turned toward the companion.
+    expression: Easy, friendly.
+    image_prompt: sitting relaxed, legs crossed, hands in lap
+    negative_prompt: slouching badly, extra limbs
+
+transitions:
+  scene:
+    - from: provocative/kitchen_cooking
+      to: provocative/meal_table
+      text: "{char} sets the finished food on the table and sits down to eat."
+    - from: provocative/meal_table
+      to: provocative/couch_sitting
+      text: "{char} finishes eating, gets up from the table and settles onto the couch."
+    - from: "*"
+      to: provocative/bed_lying
+      text: "{char} walks to the bed and lies down."
+
+  posture:
+    - { from: seated,    to: standing,  text: "rises from the seat" }
+    - { from: seated,    to: kneeling,  text: "gets up and kneels down" }
+    - { from: seated,    to: lying,     text: "lies back" }
+    - { from: standing,  to: seated,    text: "sits down" }
+    - { from: standing,  to: kneeling,  text: "kneels down" }
+    - { from: standing,  to: lying,     text: "lies down" }
+    - { from: standing,  to: squatting, text: "crouches down" }
+    - { from: squatting, to: "*",       text: "straightens up" }
+    - { from: kneeling,  to: "*",       text: "gets back up" }
+    - { from: lying,     to: seated,    text: "sits up" }
+    - { from: lying,     to: "*",       text: "gets up" }
+
+scenes:
+  general:
+    neutral:
+      subtitle: General
+      description: No specific activity.
+      environment: ""
+      sticky: false
+      poses:
+        - standing_relaxed
+        - seated_relaxed
+        - standing_arms_folded

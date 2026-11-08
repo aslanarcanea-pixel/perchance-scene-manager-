@@ -1,0 +1,41 @@
+# =====================================================================
+#  Perchance Scene Manager — library entry point
+# =====================================================================
+schema_version: 1
+library_version: "1.0.0"
+
+include:
+  - shared.yaml
+  - indoor.yaml
+  - physical.yaml
+
+settings:
+  default_scene: general/neutral
+  default_selection: mixed
+  avoid_immediate_repeat: true
+  pose_history_limit: 5
+  pose_refresh_every: 4
+  prefer_same_posture: true
+  scene_change_threshold: 2.5
+  scene_change_margin: 1
+  activity_change_threshold: 1
+  user_text_weight: 1.0
+  ai_text_weight: 0.8
+  transition_cue_bonus: 1.5
+
+transition_cues:
+  - let's go
+  - lets go
+  - let us go
+  - head* to
+  - head* over
+  - mov* to
+  - walk* over
+  - walk* into
+  - stand* up and
+  - get* up and
+  - after that
+  - time for
+  - time to
+  - shall we
+  - why don't we
