@@ -1,0 +1,180 @@
+expressions:
+  - id: EXP_001
+    name: Confident Direct Gaze
+    category: intense
+    description: Direct eye contact with a strong, self-assured expression and steady gaze.
+    visual_details: { eye_direction: direct gaze into camera, eyebrow_position: neutral, mouth: calm firm lips }
+
+  - id: EXP_002
+    name: Playful Half-Smile
+    category: warm
+    description: A light, engaging smile with a twinkle in the eyes and slight head tilt.
+    visual_details: { eye_direction: engaging camera, eyebrow_position: softly arched, mouth: asymmetrical half-smile }
+
+  - id: EXP_003
+    name: Coy Upward Glance
+    category: coy
+    description: Chin lowered and head slightly tilted while looking up at the viewer with a soft lingering smile.
+    visual_details: { eye_direction: looking up at camera from lowered chin, eyebrow_position: softly raised, mouth: closed soft smile }
+
+  - id: EXP_004
+    name: Sideways Glance
+    category: coy
+    description: Eyes slide to the side while the head stays turned toward the camera, with a small knowing smile.
+    visual_details: { eye_direction: looking sideways past camera, eyebrow_position: relaxed, mouth: small closed smile }
+
+  - id: EXP_005
+    name: Glance and Dismiss
+    category: coy
+    description: Eyes drop downward after a moment of eye contact, as if about to look back up.
+    visual_details: { eye_direction: lowered gaze just below camera, eyebrow_position: gently lowered, mouth: faint smile }
+
+  - id: EXP_006
+    name: Shy Soft Smile
+    category: warm
+    description: A gentle, slightly bashful smile with the head resting toward one shoulder.
+    visual_details: { eye_direction: looking up at camera softly, eyebrow_position: slightly raised, mouth: soft closed smile }
+
+  - id: EXP_007
+    name: Knowing Smile
+    category: warm
+    description: A calm smile that reaches the eyes, suggesting she knows something the viewer does not.
+    visual_details: { eye_direction: steady gaze at camera, eyebrow_position: one brow subtly lifted, mouth: lips closed with one corner raised }
+
+  - id: EXP_008
+    name: Teasing Smirk
+    category: playful
+    description: A lopsided smirk with a raised chin and amused eyes.
+    visual_details: { eye_direction: amused gaze at camera, eyebrow_position: one brow raised, mouth: asymmetrical smirk }
+
+  - id: EXP_009
+    name: Playful Grin
+    category: playful
+    description: A bright, open grin with crinkled eyes and an energetic tilt of the head.
+    visual_details: { eye_direction: bright gaze at camera, eyebrow_position: lifted, mouth: wide open smile showing teeth }
+
+  - id: EXP_010
+    name: Mischievous Look
+    category: playful
+    description: A sly sideways look paired with a cheeky grin, as if planning something.
+    visual_details: { eye_direction: sly sideways glance, eyebrow_position: one brow arched, mouth: crooked grin }
+
+  - id: EXP_011
+    name: Smoldering Gaze
+    category: sultry
+    description: A slow, intense stare with heavy lids and the chin dipped slightly.
+    visual_details: { eye_direction: intense stare into camera, eyebrow_position: slightly lowered, mouth: relaxed lips barely parted }
+
+  - id: EXP_012
+    name: Dropped-Cheek Gaze
+    category: sultry
+    description: Relaxed cheeks let the lower eyelids soften downward, and a slight head tilt makes the gaze look sharp and intense.
+    visual_details: { eye_direction: sharp gaze at camera, eyebrow_position: relaxed and level, mouth: soft closed lips }
+
+  - id: EXP_013
+    name: Heavy-Lidded Stare
+    category: sultry
+    description: Half-lowered eyelids with a steady look from under the brows.
+    visual_details: { eye_direction: looking at camera through lowered lids, eyebrow_position: lowered, mouth: slightly parted lips }
+
+  - id: EXP_014
+    name: Eyes Closed Head Back
+    category: soft
+    description: Eyes closed with the head tipped back and the throat relaxed, showing quiet enjoyment.
+    visual_details: { eye_direction: eyes closed, eyebrow_position: relaxed, mouth: soft contented smile }
+
+  - id: EXP_015
+    name: Parted Lips
+    category: intimate
+    description: Lips held slightly apart while looking at the viewer, drawing attention to the mouth.
+    visual_details: { eye_direction: steady gaze at camera, eyebrow_position: relaxed, mouth: lips slightly parted }
+
+  - id: EXP_016
+    name: Triangle Gaze
+    category: intimate
+    description: The eyes move from one eye to the lips and back, with a quiet and focused expression.
+    visual_details: { eye_direction: gaze lowered toward the viewer's lips, eyebrow_position: soft and level, mouth: relaxed closed lips }
+
+  - id: EXP_017
+    name: Lower Lip Bite
+    category: intimate
+    description: A light bite of the lower lip with an uncertain, playful look.
+    visual_details: { eye_direction: looking up at camera, eyebrow_position: slightly raised, mouth: lower lip lightly held by teeth }
+
+  - id: EXP_018
+    name: Fingertip to Lips
+    category: coy
+    description: A fingertip rests lightly at the lips while the eyes look back over the shoulder.
+    visual_details: { eye_direction: glancing back over shoulder, eyebrow_position: softly arched, mouth: lips touched by a fingertip }
+
+  - id: EXP_019
+    name: Soft Sigh
+    category: intimate
+    description: A slow, relaxed exhale with lowered eyes and a loosened face.
+    visual_details: { eye_direction: eyes lowered, eyebrow_position: gently relaxed, mouth: lips softly parted }
+
+  - id: EXP_020
+    name: Languid Half-Smile
+    category: soft
+    description: A lazy, unhurried half-smile with relaxed cheeks and easy eyes.
+    visual_details: { eye_direction: relaxed gaze at camera, eyebrow_position: level, mouth: slow half-smile }
+
+  - id: EXP_021
+    name: Sleepy Smile
+    category: soft
+    description: A drowsy, content smile with slightly heavy eyelids.
+    visual_details: { eye_direction: soft unfocused gaze, eyebrow_position: relaxed, mouth: gentle closed smile }
+
+  - id: EXP_022
+    name: Calm Attentive Look
+    category: calm
+    description: A composed, listening expression with a steady and friendly gaze.
+    visual_details: { eye_direction: steady gaze at camera, eyebrow_position: neutral, mouth: relaxed closed lips }
+
+  - id: EXP_023
+    name: Intent Focus
+    category: intense
+    description: A fixed, concentrated look held on the viewer with little else moving in the face.
+    visual_details: { eye_direction: fixed gaze at camera, eyebrow_position: slightly drawn together, mouth: still closed lips }
+
+  - id: EXP_024
+    name: Challenging Smirk
+    category: intense
+    description: A raised chin and level stare with a smirk that dares the viewer to respond.
+    visual_details: { eye_direction: level stare at camera, eyebrow_position: one brow raised, mouth: firm smirk }
+
+  - id: EXP_025
+    name: Bold Raised Brow
+    category: intense
+    description: One eyebrow lifted with the chin up, showing confident curiosity.
+    visual_details: { eye_direction: direct gaze at camera, eyebrow_position: one brow clearly raised, mouth: closed lips with a slight smile }
+
+  - id: EXP_026
+    name: Wide-Eyed Surprise
+    category: playful
+    description: Eyes open wide with lips slightly open, a brief look of surprise or interest.
+    visual_details: { eye_direction: wide eyes toward camera, eyebrow_position: raised high, mouth: lips softly open }
+
+  - id: EXP_027
+    name: Absorbed Curiosity
+    category: calm
+    description: Eyes fixed on something off camera, absorbed in what she is looking at.
+    visual_details: { eye_direction: looking down and away from camera, eyebrow_position: slightly lowered, mouth: relaxed lips }
+
+  - id: EXP_028
+    name: Warm Inviting Smile
+    category: warm
+    description: An open, friendly smile with relaxed eyes that draws the viewer in.
+    visual_details: { eye_direction: warm gaze at camera, eyebrow_position: softly arched, mouth: open gentle smile }
+
+  - id: EXP_029
+    name: Demure Lowered Gaze
+    category: coy
+    description: Eyes cast downward with the head tilted slightly, and a modest smile.
+    visual_details: { eye_direction: lowered gaze toward floor, eyebrow_position: gently lowered, mouth: small modest smile }
+
+  - id: EXP_030
+    name: Over-the-Shoulder Glance
+    category: coy
+    description: The head turns back over the shoulder with the eyes finding the camera.
+    visual_details: { eye_direction: looking back at camera over shoulder, eyebrow_position: softly arched, mouth: coy half-smile }

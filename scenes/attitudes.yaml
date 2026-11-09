@@ -1,0 +1,100 @@
+attitudes:
+  - id: ATT_001
+    name: Confident
+    description: Unwavering self-assurance and strong personal presence.
+    keywords: [assured, bold, poised]
+
+  - id: ATT_002
+    name: Feminine
+    description: Graceful, delicate, and inherently soft feminine elegance.
+    keywords: [graceful, delicate, soft]
+
+  - id: ATT_003
+    name: Coy
+    description: Shy-leaning playfulness with the chin lowered, looking up or sideways with a soft lingering smile.
+    keywords: [coy, shy, flirting]
+
+  - id: ATT_004
+    name: Flirtatious
+    description: Openly playful interest shown through warm eye contact, light teasing and an expressive face.
+    keywords: [flirty, playful, spark]
+
+  - id: ATT_005
+    name: Teasing
+    description: Lighthearted provocation with a knowing smirk, as if holding back a secret.
+    keywords: [teasing, smirking, banter]
+
+  - id: ATT_006
+    name: Playful
+    description: Bright, bouncy energy with easy grins and loose, animated posture.
+    keywords: [fun, lively, carefree]
+
+  - id: ATT_007
+    name: Mysterious
+    description: Reserved and unreadable, with a half-hidden smile and a gaze that gives little away.
+    keywords: [enigmatic, secretive, intriguing]
+
+  - id: ATT_008
+    name: Sultry
+    description: Calm assurance with heavy-lidded eyes and slow, controlled expression, suggesting she knows exactly what she wants.
+    keywords: [sultry, smoldering, magnetic]
+
+  - id: ATT_009
+    name: Unhurried
+    description: Deliberate, smooth and controlled pacing with no rushing or nervous fidgeting.
+    keywords: [slow, deliberate, composed]
+
+  - id: ATT_010
+    name: Languid
+    description: Loose, relaxed and unbothered, settling into the space with lazy ease.
+    keywords: [relaxed, lazy, easygoing]
+
+  - id: ATT_011
+    name: Poised
+    description: Upright, balanced and graceful, with shoulders back and an elegant stillness.
+    keywords: [elegant, composed, refined]
+
+  - id: ATT_012
+    name: Demure
+    description: Modest and gentle, with lowered eyes, a small smile and softly held posture.
+    keywords: [modest, gentle, sweet]
+
+  - id: ATT_013
+    name: Mischievous
+    description: Impish and daring, with a sideways glance and a grin that hints at trouble.
+    keywords: [impish, cheeky, sly]
+
+  - id: ATT_014
+    name: Bold
+    description: Direct and space-claiming, with open posture, raised chin and no hesitation.
+    keywords: [daring, assertive, fearless]
+
+  - id: ATT_015
+    name: Inviting
+    description: Warm and open, drawing the viewer closer with relaxed posture and an easy, welcoming look.
+    keywords: [welcoming, warm, beckoning]
+
+  - id: ATT_016
+    name: Lingering
+    description: Slow-burn restraint, holding eye contact and stillness a moment longer than expected to build tension.
+    keywords: [slow-burn, tension, restrained]
+
+  - id: ATT_017
+    name: Intent
+    description: Fully focused on the other person, with steady attention on their face and hands.
+    keywords: [focused, attentive, observing]
+
+  - id: ATT_018
+    name: Intimate
+    description: Close and comfortable, with a softened gaze, quiet expression and relaxed, open body language.
+    keywords: [close, private, tender]
+
+  - id: ATT_019
+    name: Vulnerable
+    description: Soft and open, with the head tilted to show the neck and a gentle, unguarded look.
+    keywords: [soft, open, unguarded]
+
+  - id: ATT_020
+    name: Nonchalant
+    description: Cool and casual, leaning back with an easy smirk as if completely unbothered.
+    keywords: [cool, casual, unbothered]
