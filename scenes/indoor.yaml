@@ -18,6 +18,13 @@ scenes:
           triggers: [talk, listen, close]
           selection: random
           poses: [couch_lean_in, couch_cross, couch_knees_wide, couch_knee_on_cushion]
+      sequences:
+        settle_in:
+          description: settling in and getting comfortable
+          triggers: ["settle in", "get comfortable", "make yourself comfortable"]
+          auto_start: false
+          step_every: 2
+          steps: [couch_cross, couch_lean_in, couch_curl, couch_sprawl]
       poses:
         - id: couch_sprawl
           name: Lazy Sprawl
@@ -75,6 +82,7 @@ scenes:
           image_prompt: sitting on couch edge, leaning forward, forearms on knees, looking up
           negative_prompt: extra limbs, bad hands, deformed, nudity
           triggers: [lean, closer]
+          distance: [near, close]
         - id: couch_cross
           name: Legs Crossed
           posture: seated
@@ -103,6 +111,7 @@ scenes:
           image_prompt: sitting on couch, knees wide apart, feet flat, hands on thighs, leaning forward, direct gaze
           negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
           triggers: [wide, thighs]
+          distance: [near, close]
         - id: couch_hands_raised
           name: Hands Beside Head
           posture: seated
@@ -117,6 +126,7 @@ scenes:
           image_prompt: sitting on couch, legs stretched wide, both hands raised beside head, expressive
           negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
           triggers: [raised, gesture]
+          distance: [apart, near]
         - id: couch_knee_on_cushion
           name: Knee on Cushion
           posture: kneeling
@@ -517,7 +527,7 @@ scenes:
     meal_table:
       subtitle: Having a Meal
       environment: kitchen table
-      triggers: [meal, eat, dinner, "having dinner"]
+      triggers: [meal, eat, dinner, lunch, breakfast, "having dinner", "have dinner", "for dinner", "at the table", "sit at the table"]
       exit_triggers: ["finished eating", "clear the table", "leave the table"]
       entry: sits at the table
       default_activity: eating
@@ -783,10 +793,11 @@ scenes:
           image_prompt: leaning on wall, beckoning with finger, ankles crossed, sly smile
           negative_prompt: extra limbs, bad hands, deformed, nudity
           triggers: [beckon, finger]
+          distance: [apart, near]
     desk_perch:
       subtitle: Perched on Desk
       environment: office desk
-      triggers: [desk, "on the desk", "office desk", "sit on the desk"]
+      triggers: [desk, laptop, computer, "on the desk", "at the desk", "at her desk", "office desk", "sit on the desk"]
       exit_triggers: ["get off the desk", "stand up", "leave the desk"]
       entry: perches on the desk edge
       default_activity: sitting_on_desk
@@ -995,6 +1006,7 @@ scenes:
           image_prompt: sitting on bed, leaning forward, hands at chest, elbows in, chin down, looking up
           negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
           triggers: [lean, collar]
+          distance: [near, close]
         - id: bedsit_edge_cross
           name: Crossed at the Edge
           posture: seated
@@ -1071,6 +1083,7 @@ scenes:
           image_prompt: standing from behind, leaning on bed rail, looking over shoulder, hand on hip, feet together
           negative_prompt: extra limbs, bad hands, deformed, nudity, explicit
           triggers: [rail, shoulder]
+          distance: [apart, near]
         - id: bedside_bend_thighs
           name: Hands on Thighs
           posture: standing
