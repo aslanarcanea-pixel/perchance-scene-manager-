@@ -1,0 +1,61 @@
+# =====================================================================
+#  Perchance Scene Manager — library entry point
+# =====================================================================
+schema_version: 1
+library_version: "1.0.0"
+
+include:
+  - shared.yaml
+  - indoor.yaml
+  - physical.yaml
+  - behavior.yaml
+  - attitudes.yaml
+  - facial_expressions.yaml
+
+settings:
+  default_scene: general/neutral
+  default_selection: mixed
+  avoid_immediate_repeat: true
+  pose_history_limit: 5
+  pose_refresh_every: 4
+  prefer_same_posture: true
+  scene_change_threshold: 2.5
+  scene_change_margin: 1
+  activity_change_threshold: 1
+  user_text_weight: 1.0
+  ai_text_weight: 0.8
+  transition_cue_bonus: 1.5
+  # --- v2 settings ---
+  directive_mode: full             # full | compact (compact = short reminder when nothing changed)
+  badge: true                      # visible "scene - pose" note in the chat
+  detect_negation: true            # "not on the couch" does not count
+  detect_hypothetical: true        # past/plans/"would" count for less
+  hybrid_margin: 1.0               # scenes this close are "ambiguous" (used by --detection hybrid)
+  tension_enabled: true
+  stage_up_threshold: 1.5
+  stage_decay_turns: 6
+  max_stage: intimacy              # highest stage allowed
+  micro_chance: 0.35
+  micro_min_gap: 2
+  distance_enabled: true
+  continuity_enabled: true
+  adopt_ai_posture: true           # follow the posture the AI narrates
+  default_camera: front view, eye level
+  snapshot_limit: 40
+
+transition_cues:
+  - let's go
+  - lets go
+  - let us go
+  - head* to
+  - head* over
+  - mov* to
+  - walk* over
+  - walk* into
+  - stand* up and
+  - get* up and
+  - after that
+  - time for
+  - time to
+  - shall we
+  - why don't we
