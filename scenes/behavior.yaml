@@ -1,0 +1,110 @@
+# =====================================================================
+#  Behaviour data: synonyms, moods, tension ladder, micro-movements,
+#  distance, continuity (clothing) and camera rules.
+#  All of it is optional; delete a block to switch that feature off.
+# =====================================================================
+
+# Synonyms: every word in a group matches every other word, inside any trigger.
+synonyms:
+  couch: [sofa, settee, loveseat]
+  bed: [mattress]
+  desk: [workstation]
+  laptop: [computer, notebook]
+  dinner: [supper]
+  kitchen: [kitchenette]
+
+# Mood map: how a pose's free-text `expression` is linked to expression categories
+# (see facial_expressions.yaml). A pose can override with `moods: [coy, warm]`
+# or pick exact expressions with `expressions: [EXP_003, EXP_005]`.
+mood_map:
+  coy: [coy, shy, demure, bashful, sly, knowing, modest]
+  playful: [playful, mischievous, grin, amused, teasing, daring, curious, cheeky, eager, animated]
+  warm: [warm, friendly, inviting, smile, smiling, content, easy, pleasant]
+  sultry: [sultry, smolder, smoldering, lidded, languid, lazy, seductive]
+  intense: [confident, challenging, bold, direct, intent, determined, intense, focused]
+  soft: [soft, sleepy, peaceful, dreamy, gentle, relaxed, contented]
+  calm: [calm, composed, attentive, thoughtful, absorbed, patient, serene]
+  intimate: [intimate, tender, sigh, parted, breathy]
+
+# Tension ladder. The stage rises one step at a time when its cue words appear,
+# and falls one step after `stage_decay_turns` quiet turns. Chat commands:
+#   /stage            show        /stage off | auto
+#   /stage <name>     fix a stage /stage max <name>   cap the highest stage
+tension:
+  start: flirting
+  stages:
+    flirting:
+      moods: [coy, playful, warm]
+      attitudes: [Coy, Flirtatious, Playful, Teasing, Demure, Mischievous]
+      cues: [flirt, tease, wink, blush, giggle, compliment, banter, "smiles at you", "playful"]
+    slow_burn:
+      moods: [coy, warm, calm, intense]
+      attitudes: [Lingering, Intent, Unhurried, Mysterious, Poised]
+      cues: [tension, linger, "holds your gaze", "hold her gaze", "eye contact", "stands close", "standing close", "moves closer", whisper, "quiet voice", "can't look away"]
+    seduction:
+      moods: [sultry, intense, playful]
+      attitudes: [Sultry, Confident, Bold, Unhurried, Inviting, Mysterious]
+      cues: [seduce, seductive, sultry, tempt, "slow smile", "low voice", "come closer", "bites her lip", "bite her lip", "hooded eyes"]
+    intimacy:
+      moods: [intimate, soft, warm, sultry]
+      attitudes: [Intimate, Vulnerable, Inviting, Languid]
+      cues: [cuddle, embrace, hug, kiss, "holds your hand", "hold hands", "rests her head", "leans into you", "forehead"]
+
+# Small idle movements, by posture. Poses can add their own with `micro: [...]`.
+micro_movements:
+  standing:
+    - shifts her weight to the other leg
+    - tucks a strand of hair behind her ear
+    - smooths the front of her outfit
+    - rolls her shoulders back
+    - glances toward the window and back
+    - taps a finger against her arm
+  seated:
+    - crosses her legs the other way
+    - adjusts her position slightly
+    - tucks her hair behind her ear
+    - toys with a ring on her finger
+    - leans a little closer
+    - smooths her skirt over her knee
+  lying:
+    - shifts onto her other side
+    - stretches an arm over her head
+    - rests her cheek on her hand
+    - adjusts the pillow under her head
+    - curls her toes
+  kneeling:
+    - shifts her weight onto one knee
+    - brushes her hair back over her shoulder
+    - straightens her back
+    - rests her hands on her thighs
+  squatting:
+    - steadies herself with one hand
+    - shifts her balance
+    - tucks her hair back
+
+# Distance between the two characters. Poses may list `distance: [near, close]`.
+distance:
+  default: near
+  levels:
+    - key: apart
+      description: a few steps away, not touching
+      cues: ["across the room", "a few steps", "from a distance", "keeps her distance", "steps back", "step back"]
+    - key: near
+      description: within arm's reach, side by side
+      cues: [beside, "next to", nearby, "walks over", "sits next"]
+    - key: close
+      description: very close, shoulders or knees almost touching
+      cues: [closer, "moves closer", "leans in", "lean in", "against you", "close to you", "draws near", snuggle]
+
+# Clothing continuity: outer layers only. Once something is taken off it stays off
+# until the text says it is put back on.
+continuity:
+  garments: [jacket, coat, blazer, cardigan, scarf, gloves, glove, shoes, heels, boots, glasses, necklace, belt, hat, watch, tie]
+
+# Camera angle for image prompts. A pose or scene can set `camera:` itself.
+camera:
+  default: front view, eye level
+  rules:
+    - { match: "from behind|back to viewer|rear|over shoulder", camera: "rear three-quarter view" }
+    - { match: "low angle", camera: "low angle shot" }
+    - { match: "from above|viewed from above|high angle", camera: "high angle shot" }
