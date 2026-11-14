@@ -74,6 +74,12 @@ scenes:
       description: No specific activity.
       environment: ""
       sticky: false
+      default_activity: idle
+      activities:
+        idle:
+          description: being relaxed and attentive
+          selection: random
+          poses: [standing_relaxed, seated_relaxed, standing_arms_folded]
       poses:
         - standing_relaxed
         - seated_relaxed
